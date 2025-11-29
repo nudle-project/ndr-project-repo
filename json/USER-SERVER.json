@@ -1,0 +1,104 @@
+//The server user data in a 300 line json file.
+{
+  "users": [
+    {
+      "id": "usr_001",
+      "username": "admin_user",
+      "email": "admin@nudleos.com",
+      "role": "administrator",
+      "status": "active",
+      "lastLogin": "2023-10-27T10:30:00Z",
+      "permissions": ["read", "write", "delete", "manage_users", "configure_server"],
+      "settings": {
+        "theme": "dark",
+        "notifications": true,
+        "language": "en_US"
+      }
+    },
+    {
+      "id": "usr_002",
+      "username": "moderator_alpha",
+      "email": "alpha@nudleos.com",
+      "role": "moderator",
+      "status": "active",
+      "lastLogin": "2023-10-27T09:45:15Z",
+      "permissions": ["read", "write", "moderate_content", "view_logs"],
+      "settings": {
+        "theme": "light",
+        "notifications": true,
+        "language": "en_US"
+      }
+    },
+    {
+      "id": "usr_003",
+      "username": "developer_beta",
+      "email": "beta@nudleos.com",
+      "role": "developer",
+      "status": "active",
+      "lastLogin": "2023-10-27T08:00:00Z",
+      "permissions": ["read", "write", "execute_scripts", "access_api_keys"],
+      "settings": {
+        "theme": "dark-blue",
+        "notifications": false,
+        "language": "en_US"
+      }
+    },
+    {
+      "id": "usr_004",
+      "username": "regular_user_1",
+      "email": "user1@nudleos.com",
+      "role": "user",
+      "status": "active",
+      "lastLogin": "2023-10-26T17:22:30Z",
+      "permissions": ["read", "write_self"],
+      "settings": {
+        "theme": "system",
+        "notifications": true,
+        "language": "es_ES"
+      }
+    },
+    {
+      "id": "usr_005",
+      "username": "guest_viewer",
+      "email": "guest@nudleos.com",
+      "role": "guest",
+      "status": "inactive",
+      "lastLogin": "2023-10-20T11:05:00Z",
+      "permissions": ["read"],
+      "settings": {
+        "theme": "light",
+        "notifications": false,
+        "language": "en_US"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "name": "Administrators",
+      "members": ["usr_001"],
+      "description": "Users with full administrative access to the server."
+    },
+    {
+      "name": "Moderators",
+      "members": ["usr_002"],
+      "description": "Users responsible for content moderation and user management."
+    },
+    {
+      "name": "Developers",
+      "members": ["usr_003"],
+      "description": "Users with access to development tools and scripts."
+    },
+    {
+      "name": "Standard Users",
+      "members": ["usr_004"],
+      "description": "Regular users with basic access."
+    }
+  ],
+  "serverInfo": {
+    "name": "NudleOS Main Server",
+    "version": "1.0.0",
+    "lastUpdated": "2023-10-27T10:30:00Z",
+    "uptime": "7 days, 12 hours",
+    "status": "operational"
+  }
+}
