@@ -1,5 +1,5 @@
 ;
-/* SASM, version 1.8
+/* QASM, version 1.8
 theres an actual semicolon at the start because error on without it*/
 #include <stdio.h>
 #include <stdlib.h>
