@@ -1,51 +1,46 @@
-add 3 to 4
-int 3
-with int  3 add reg with naem int 3
-integer 13
-mov eax with tan 4
-arith mov eax to add 4
-add 3 to 4
-int 3
-with int  3 add reg with naem int 3
-integer 13
-mov eax with tan 4
-arith mov eax to add 4
-mov ebx with 3
-add eax ebx
-mov ecx with 7
-add eax ecx
-mov edx with 10
-add eax edx
-
-mov esi with 13
-add eax esi
-;Below, we will define a bit statement to show it it running on a 24-bit system
-BITS 24
-;Now, we will add hardware detection stuff
-mov edi with 16
-add eax edi
-
-mov ebp with 24
-add eax ebp
-mov eax with 3
-mov ebx with 4
-add eax ebx
-
-mov eax with 3
-mov ebx with 3
-add eax ebx
-
-mov eax with 13
-mov ebx with 4
-add eax ebx
-
-mov eax with 3
-mov ebx with 3
-add eax ebx
-
-mov eax with 13
-mov ebx with 4
-add eax ebx
-reg 16 = 0x0156
-add reg 16 to 7
-add eax 7
+section .data
+    bar db '[                    ]', 0
+    bar_length equ 20
+    message db 'Booting Up: ', 0
+    newline db 10, 0
+section .text
+    global _start
+_start:
+    mov edx, 9          
+    mov ecx, message    
+    mov ebx, 1          
+    mov eax, 4          
+    mov ecx, bar        
+    mov edi, 1          
+print_loop:
+    cmp edi, bar_length + 1
+    jae done_loading
+    mov byte [ecx + edi], '='
+    mov edx, bar_length + 2  
+    mov ebx, 1
+    mov eax, 4
+    int 0x80
+    call delay
+    mov edx, bar_length + 2
+    mov ecx, crlf_return
+    mov ebx, 1
+    mov eax, 4
+    int 0x80
+    inc edi
+    jmp print_loop
+done_loading:
+    mov edx, 1
+    mov ecx, newline
+    mov ebx, 1
+    mov eax, 4
+    int 0x80
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+delay:
+    mov ecx, 50000000
+delay_loop:
+    loop delay_loop
+    ret
+section .data
+crlf_return db 13 
