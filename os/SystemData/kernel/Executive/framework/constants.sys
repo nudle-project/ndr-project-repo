@@ -1,0 +1,9 @@
+app.*.kgt = {
+    mksyscall EX-0x015, EX-0x015 = app *.kgt =><- -_xz execfile cor-exec.bin 
+    importsyscall EX-0x128 bitpower=128, y-_xz -_xz --tlcurseslib --pathfind-from-root
+    mksyscall NO-1 --i-am-stupid
+}
+$shell{x86} --icon /os/ico/shell-x86, ${root-cpp --i-am-an-idiot}
+function mk-_xz {
+    -_xz --new --xorztype::cpp "xz-_x" zd kl -Pkd --door-vm::docker
+}
