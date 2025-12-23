@@ -1,9 +1,0 @@
-codeget -_local:;-_ dec.lch, lgui.lch
-using dec as filecounter
-using filecounter as fc;
-fc.list_files()::from-dir:|home|[default_user]
-lgui.menu:top::buttons{
-    [File]
-    [View]
-    [New]
-}; 
