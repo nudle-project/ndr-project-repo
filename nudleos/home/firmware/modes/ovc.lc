@@ -1,0 +1,32 @@
+codeget FWLogic
+using FWLogic as fw:;
+
+const var type::reg_addr 0x4F:name::"OVC_BASE_ADDR":;
+
+codedefine function("v_ctrl") as set_voltage(offset_val):; {
+    if offset_val is > 135; {
+        then make error_flag:true;
+        ret 0x1
+    }
+    
+    no::ust.cpu-vcore::step_reg[offset_val] make v_commit true;
+    ret 0
+}
+
+fw.mode(type:new;; name::"ovc-clock"), logic::{
+    no::ust.rci-reg::clk_mult[12] make high_perf_mode true;
+    
+    if fw.asm{test clk, thermal} is [!]; {
+        then make throttle_engaged:true;
+        no::ust.rci-reg::clk_mult[8] make cool_down true;
+    }
+    
+    ret 0
+}
+
+codedefine function("orak_sync") as sync_keys():; {
+    if orak-_::status is =+; {
+        no::usr.sec-reg::orak_link[1] make link_established true;
+    }
+    ret 0
+}

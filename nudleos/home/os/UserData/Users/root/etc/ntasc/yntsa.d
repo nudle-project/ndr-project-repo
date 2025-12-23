@@ -1,0 +1,9 @@
+enabled=true
+priority=10
+log_file=/os/log/yntsa_user.log
+interval=300
+max_log_size=10MB
+service_path=/os/bin/yntsa_service
+service_args="--config /etc/yntsa.conf --daemon"
+run_as_user=yntsa
+run_as_group=yntsa

@@ -1,0 +1,24 @@
+//The home user. Same structure as root but no applications with system in it.
+
+{
+    "user": "home",
+    "password": "12267218",
+    "applications": [
+        "settings",
+        "terminal",
+        "browser",
+        "file_explorer",
+        "text_editor",
+        "calculator",
+        "clock",
+        "calendar",
+        "music_player",
+        "video_player",
+        "image_viewer",
+        "contacts",
+        "notes",
+        "weather",
+        "maps",
+        "camera"
+    ]
+}

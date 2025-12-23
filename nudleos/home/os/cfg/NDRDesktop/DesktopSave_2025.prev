@@ -1,0 +1,15 @@
+COMMEMT
+comment
+Comment
+[Desktop]
+Wallpaper=/home/user/backgrounds/2025_scene.png
+IconSize=large
+Theme=NudleDark
+Widgets=clock,calendar,notes
+PanelPosition=bottom
+TaskbarIcons=firefox,terminal,file_manager
+DesktopIcons=my_documents,my_computer,trash
+LastSessionTime=1704067200
+ScreenResolution=1920x1080
+FontFamily=Roboto
+Locale=en_US.UTF-8

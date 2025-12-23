@@ -1,0 +1,4 @@
+[Partition]
+size = +5G
+data-file = /efi
+mount = /boot/efi

@@ -1,0 +1,35 @@
+; NASM x86 example: read a byte from port 0x60 (keyboard data port)
+section .text
+global _start
+_start:
+    ; read a byte from keyboard port
+    mov dx, 0x60      ; port address of keyboard data register
+    in al, dx         ; read a byte from port into al
+
+    ; optional: output to a port (example, VGA register)
+    mov dx, 0x3C8     ; VGA palette index port
+    mov al, 0x0F      ; color index
+    out dx, al        ; write color index to port
+
+    ; exit program (Linux syscall)
+    mov eax, 60       ; sys_exit
+    xor edi, edi
+    syscall
+[_function:
+    push ebp
+    mov ebp, esp
+    sub esp, 
+    leave
+    ret]
+[section .data]
+%macro  
+    
+%endmacro
+section .rodata
+_function@:
+    push ebp
+    mov ebp, esp
+    sub esp, 
+    leave
+    retn 
+section .text

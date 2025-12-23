@@ -1,0 +1,3 @@
+$root.class = /
+$root.class.dirs = / -rf
+$root.class.commands = all

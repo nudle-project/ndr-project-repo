@@ -1,0 +1,3 @@
+boot:files/:debug.rs,load.rs,main.rd,system.rs
+rs:/cargo loader.toml
+asm:/nasm

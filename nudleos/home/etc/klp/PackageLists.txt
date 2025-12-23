@@ -1,0 +1,17 @@
+[PackageLists]
+cmake
+qmake
+make
+zsh
+bash
+win32-mode
+getcmdlets
+clone
+git
+gcc
+[LibraryLists]
+mingw
+python/*
+cpp/*
+logicode/*
+pip
