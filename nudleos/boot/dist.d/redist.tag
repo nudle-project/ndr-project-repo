@@ -1,0 +1,4 @@
+[RedistributableItem]
+True
+[RedistributableLib]
+True

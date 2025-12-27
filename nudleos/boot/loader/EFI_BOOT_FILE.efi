@@ -1,0 +1,3 @@
+boot:nudleos
+kernel:/kernel
+loader:.

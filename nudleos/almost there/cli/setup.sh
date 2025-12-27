@@ -1,3 +1,0 @@
-echo """
-Setup (i guess)
-"""
