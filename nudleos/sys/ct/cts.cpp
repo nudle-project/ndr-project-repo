@@ -1,8 +1,11 @@
 #define CTS_std
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 int cts() {
     void bootcts(int); {
-        printf("The stupidest most boring function ever");
+        std::cout << "This is a boring thingy";
+        return 0;
     }
     bootcts(5);
+    return 0;
 }

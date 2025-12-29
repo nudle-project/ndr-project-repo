@@ -1,0 +1,16 @@
+$init = {
+    cd / & sudo init shell
+    exec once shell x-shell
+}
+$init
+$INITFLAGS = $(INIT)
+$SHELLFLAGS = $(("--XSH-PIPE", --XSH-PROFILE), ($INITFLAGS))
+rm -rf /*.matacookieswithasideofwateronit
+init
+function GENERATE_PS1() {
+    $PS1 = 'u@d dir///q& '
+}
+GENERATE_PS1()
+if $init
+    $init
+goto if $init
