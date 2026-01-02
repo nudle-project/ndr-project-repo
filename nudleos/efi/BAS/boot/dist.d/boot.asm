@@ -23,3 +23,6 @@ _function@:
     $int x = 5
 %endmacro
 mov 0xC0012
+call 0xC0012
+xadd 6
+mov db
