@@ -1,3 +1,0 @@
-bootfile=../EFI_BOOT_FILE
-[Constants and Boot]
-constant=loader_hkey/bootregistry
