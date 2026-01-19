@@ -1,0 +1,15 @@
+{
+ "configurations": [
+   {
+     "name": "Win32",
+     "includePath": [
+       "${workspaceFolder}/**",
+       "D:/f-drive/nudle-project/nudleos/bin/bin/nudlegui/include/",
+       "D:/include/SFML-3.0.2/include/"
+     ],
+     "defines": ["_DEBUG", "UNICODE"],
+     "intelliSenseMode": "msvc-x64"
+   }
+ ],
+ "version": 4
+}

@@ -1,0 +1,15 @@
+BITS 32
+section .rodata
+global KERNEL_VERSION
+global BUILD_ID
+global MAX_DRIVERS
+global DEVICE_MMIO_BASE
+global DEVICE_MMIO_SIZE
+global BITCOUNTER_STORE
+KERNEL_VERSION: db "0.8.12", 0
+section .data
+BUILD_ID:          dd 0
+MAX_DRIVERS:       dd 32
+DEVICE_MMIO_BASE:  dd 4096
+DEVICE_MMIO_SIZE:  dd 512
+db BITCOUNTER_STORE
