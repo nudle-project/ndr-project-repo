@@ -7,5 +7,7 @@ int cts() {
         return 0;
     }
     bootcts(5);
+    const char* CTS;
+
     return 0;
 }
